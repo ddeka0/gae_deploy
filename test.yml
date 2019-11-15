@@ -1,11 +1,19 @@
 config:
-  #target: https://hazel-form-257916.appspot.com/
-  target: http://localhost:8080/
+  target: https://hazel-form-257916.appspot.com/
+  socketio:
+    transports: ["websocket"]
+    reconnectionDelay: 1000
+    reconnection: true
+    reconnectionAttempts: 10
+    agent: false
+    upgrade: false
+    rejectUnauthorized: false
+  #target: http://localhost:8080/
   phases:
-    - duration: 2
-      arrivalRate: 1
+    - duration: 1000
+      arrivalRate: 10
 scenarios:
-  - name: "Connect and send a bunch of messages"
+  - name: "Load Test"
     engine: "socketio"
     flow:
       #- loop:
@@ -13,14 +21,14 @@ scenarios:
           # channel: "createGame"
           # data: {name: deka}
           channel: "joinGame"
-          data: { name: "deka1", room: "room-1"}
-          response:
-            channel: "player2"
-            data: {name: deka1, room: 'room-1'}
+          data: { name: "deka1", room: "room-2"}
+          # response:
+          #   channel: "player2"
+          #   data: {name: deka1, room: 'room-1'}
           
           # capture:
         #   regexp: "deka"
         #   as: "id"
         # log: "Id value: {{ id }}"
-      #- think: 0
+      - think: 1
         #count: 50
