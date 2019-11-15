@@ -1,0 +1,26 @@
+config:
+  #target: https://hazel-form-257916.appspot.com/
+  target: http://localhost:8080/
+  phases:
+    - duration: 2
+      arrivalRate: 1
+scenarios:
+  - name: "Connect and send a bunch of messages"
+    engine: "socketio"
+    flow:
+      #- loop:
+      - emit:
+          # channel: "createGame"
+          # data: {name: deka}
+          channel: "joinGame"
+          data: { name: "deka1", room: "room-1"}
+          response:
+            channel: "player2"
+            data: {name: deka1, room: 'room-1'}
+          
+          # capture:
+        #   regexp: "deka"
+        #   as: "id"
+        # log: "Id value: {{ id }}"
+      #- think: 0
+        #count: 50
