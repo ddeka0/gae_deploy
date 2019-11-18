@@ -10,6 +10,8 @@
   "author": "Ayush Gupta",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/monitoring": "^1.5.0",
+    "@google-cloud/storage": "^4.1.2",
     "artillery": "^1.6.0-29",
     "body-parser": "^1.15.2",
     "eslint-plugin-import": "^2.7.0",
@@ -19,7 +21,8 @@
     "skeleton": "^0.1.2",
     "skeleton-css": "^2.0.4",
     "socket.io": "^1.7.1",
-    "socket.io-client": "^2.3.0"
+    "socket.io-client": "^2.3.0",
+    "yargs": "^14.2.0"
   },
   "devDependencies": {
     "eslint": "^4.6.1",

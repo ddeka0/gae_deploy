@@ -24,6 +24,13 @@ io.on('connection', (socket) => {
     // Connect the Player 2 to the room he requested. Show error if room full.
     socket.on('joinGame', function (data) {
 		// console.log(io.nsps['/'].adapter.rooms);
+		let xx = 0;
+		while(xx < 100000000) {
+			let yy = 0;
+			yy = yy + 10;
+			yy = yy - 10;
+			xx++;
+		}
         var room = io.nsps['/'].adapter.rooms[data.room];
 		if (room && room.length === 1) {
 			//console.log("room found");

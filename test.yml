@@ -11,7 +11,7 @@ config:
   #target: http://localhost:8080/
   phases:
     - duration: 1000
-      arrivalRate: 10
+      arrivalRate: 1
 scenarios:
   - name: "Load Test"
     engine: "socketio"
@@ -21,10 +21,10 @@ scenarios:
           # channel: "createGame"
           # data: {name: deka}
           channel: "joinGame"
-          data: { name: "deka1", room: "room-2"}
-          # response:
-          #   channel: "player2"
-          #   data: {name: deka1, room: 'room-1'}
+          data: { name: "deka1", room: "room-3"}
+          response:
+            channel: "player2"
+            data: {name: deka1, room: 'room-3'}
           
           # capture:
         #   regexp: "deka"
