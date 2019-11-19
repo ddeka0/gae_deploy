@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
-  "author": "Ayush Gupta",
+  "author": "Vidhi Sethi",
   "license": "ISC",
   "dependencies": {
     "artillery": "^1.6.0-29",

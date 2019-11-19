@@ -55,5 +55,5 @@ io.on('connection', (socket) => {
 server.listen(8080,()=>{
 	const host = server.address().address;
 	const port = server.address().port;
-	console.log(`tic-tac-toe app listening at http://${host}:${port}`);
+	console.log(`Game app listening at http://${host}:${port}`);
 });

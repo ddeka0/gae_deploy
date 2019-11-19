@@ -5,7 +5,7 @@
   let game;
 
   // const socket = io.connect('http://tic-tac-toe-realtime.herokuapp.com'),
-  const socket = io.connect('https://hazel-form-257916.appspot.com/');
+  const socket = io();
 
   class Player {
     constructor(name, type) {
